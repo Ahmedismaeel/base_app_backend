@@ -1,11 +1,14 @@
 spring:
   datasource:
-    username: vyymeuga_ahmed
-    password: Ahmed@123@123
-    url: jdbc:mysql://solvenya.sd:3306/vyymeuga_mystore?useSSL=false&useLegacyDatetimeCode=false
+#    username: vyymeuga_ahmed
+#    password: Ahmed@123@123
+#    url: jdbc:mysql://solvenya.sd:3306/vyymeuga_mystore?useSSL=false&useLegacyDatetimeCode=false
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/store?useSSL=false&useLegacyDatetimeCode=false
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       dialect: org.hibernate.dialect.MySQLDialect
     show-sql: true

@@ -24,14 +24,17 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer id ;
+    @Column(nullable = false)
     private  String firstName;
+
     private  String lastName;
     private  String password;
     @Column(unique=true)
     private  String email;
     @Enumerated( EnumType.STRING )
     private Role role;
-
+    @Builder.Default
+    private Boolean deleted = false;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
